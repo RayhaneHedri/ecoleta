@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: Ecoleta
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    region: oregon
+    branch: main
+    healthCheckPath: /
