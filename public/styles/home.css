@@ -1,0 +1,219 @@
+#page-home {
+    height: 100vh;
+    background: url('../assets/home-background.svg') no-repeat;
+    background-position: 35vw bottom;
+}
+
+#page-home .content {
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#page-home header {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page-home header a {
+    
+    display: flex;
+    color: var(--title-color);
+    font-weight: 700;
+    
+}
+
+#page-home header a span {
+    margin-right: 16px;
+    display: flex;
+    background-image: url('../assets/log-in.svg');
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main {
+    max-width: 560px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#page-home main h1 {
+    font-size: 54px;
+}
+
+#page-home main p {
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+#page-home main a {
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    background-color: var(--primary-color);
+    transition: 400ms;
+
+}
+
+#page-home main a:hover {
+    background-color: #2fb86e;
+}
+
+#page-home main a span {
+    width: 72px;
+    height: 72px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-home main a span::after {
+    content: "";
+    background-image: url('../assets/search.svg');
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main a strong {
+    flex: 1;
+    color: white;
+    text-align: center;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 150px;
+}
+
+.card {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #6c6c80;
+    margin-top: 8px;
+}
+
+.info-section {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Ensure space between image and text */
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+.info-image {
+    flex: 1; /* Make image section flexible */
+    max-width: 45%; /* Limit the width of the image section */
+}
+
+.info-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: rounds the image corners */
+}
+
+.info-text {
+    flex: 1; /* Make text section flexible */
+    max-width: 50%; /* Limit the width of the text section */
+    margin-left: 20px; /* Add some space between image and text */
+}
+
+.info-text h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6; /* Improve readability */
+}
+
+.footer {
+    background-color: #322153;
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left {
+    font-size: 14px;
+}
+
+.footer-right .footer-links {
+    list-style: none;
+    display: flex;
+}
+
+.footer-right .footer-links li {
+    margin-left: 20px;
+}
+
+.footer-right .footer-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-right .footer-links li a:hover {
+    text-decoration: underline;
+}

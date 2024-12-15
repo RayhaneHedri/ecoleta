@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-create-point" %}
+
+{% block title %}
+    <title>Créer un point de collecte</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/create-point.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+    <form action="/savepoint" method="POST">
+        <h1>Inscription d'un point de collecte</h1>
+        <fieldset>
+            <legend>
+                <h2>Informations sur l'entité</h2>
+            </legend>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="name">Nom de l'entité</label>
+                    <input type="text" name="name" required="required">
+                </div>
+                <div class="field">
+                    <label for="name">Image de l'entité</label>
+                    <input type="url" name="image" placeholder="http://" required="required">
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="address">Adresse</label>
+                    <input type="text" name="address" required="required">
+                </div>
+                <div class="field">
+                    <label for="address2">Numéro/Complément</label>
+                    <input type="text" name="address2" required="required">
+                </div>
+            </div>
+            <div class="field-group">
+                <div class="field">
+                    <label for="state">État</label>
+                    <select name="uf" required="required">
+                        <option value="">Sélectionnez un État</option>
+                    </select>
+
+                    <input type="hidden" name="state">
+                </div>
+                <div class="field">
+                    <label for="city">Ville</label>
+                    <select name="city" disabled="disabled" required="required">
+                        <option value="">Sélectionnez une Ville</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h2>Articles collectés</h2>
+                <span>Sélectionnez un ou plusieurs articles ci-dessous</span>
+            </legend>
+            <div class="items-grid">
+                <li data-id="Lamps">
+                    <img src="/assets/lampadas.svg" alt="Lampes">
+                    <span>Lampes</span>
+                </li>
+                <li data-id="Batteries">
+                    <img src="/assets/baterias.svg" alt="Batteries">
+                    <span>Batteries</span>
+                </li>
+                <li data-id="Paper and Cardboard">
+                    <img src="/assets/papeis-papelao.svg" alt="Papier et Carton">
+                    <span>Papier et Carton</span>
+                </li>
+                <li data-id="Electronic Waste">
+                    <img src="/assets/eletronicos.svg" alt="Déchets électroniques">
+                    <span>Déchets électroniques</span>
+                </li>
+                <li data-id="Organic Waste">
+                    <img src="/assets/organicos.svg" alt="Déchets organiques">
+                    <span>Déchets organiques</span>
+                </li>
+                <li data-id="Cooking Oil">
+                    <img src="/assets/oleo.svg" alt="Huile de cuisson">
+                    <span>Huile de cuisson</span>
+                </li>
+            </div>
+            <input type="hidden" name="items">
+        </fieldset>
+        <button type="submit">Enregistrer le point de collecte</button>
+    </form>
+
+{% endblock content %}
+
+{% block modal %}
+    {% if saved %}
+        {% include "partials/point-created.html" %}
+    {% endif %}
+{% endblock modal %}
+
+{% block scripts %}
+    <script src="/scripts/create-point.js"></script>
+{% endblock scripts %}

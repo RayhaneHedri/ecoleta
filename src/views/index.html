@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-home" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="stylesheet" href="/styles/modal.css">
+
+{% block content %}
+<div class="content">
+    <header>
+        <img src="/assets/logo2.png" style="width: 20%;" alt="logomarque">
+        <a href="/create-point">
+            <span></span>
+            Enregistrer un point de collecte
+        </a>
+    </header>
+    <main>
+        <h1>Votre solution pour le recyclage des déchets électroniques</h1>
+        <p>Aidez à protéger la planète en recyclant vos appareils électroniques de manière responsable.</p>
+        <a href="#">
+            <span></span>
+            <strong>Rechercher des points de collecte</strong>
+        </a>
+    </main>
+</div>
+
+<h1 style="text-align: center; margin-top: 50px;">Nos Activités</h1>
+<div id="cards-container"></div>
+
+<section class="info-section">
+    <div class="info-image">
+        <img src="/assets/group-ecology-activists-standing-forest.jpg" alt="Image informative">
+    </div>
+    <div class="info-text">
+        <h2>L'importance du recyclage des déchets électroniques pour la planète et notre avenir</h2>
+        <p>Le recyclage des déchets électroniques est essentiel pour protéger notre environnement. Chaque année, des millions de tonnes de déchets électroniques polluent nos sols et nos eaux. En recyclant ces appareils, nous récupérons des matériaux précieux tout en réduisant la pollution et les risques pour la santé. Il est crucial de soutenir des pratiques de recyclage responsables et de rendre les points de collecte accessibles à tous. En recyclant vos appareils électroniques, vous contribuez à un avenir plus durable et à la préservation de notre planète.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>&copy; 2024 Votre Entreprise. Tous droits réservés.</p>
+        </div>
+        <div class="footer-right">
+            <ul class="footer-links">
+                <li><a href="#">À propos de nous</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+                <li><a href="#">Conditions d'utilisation</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+{% endblock content %}
+
+{% block modal %}
+{% include "partials/modal.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+<script src="/scripts/index.js"></script>
+{% endblock scripts %}
